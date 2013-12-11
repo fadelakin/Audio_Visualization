@@ -13,6 +13,7 @@ void setup()
   
   minim = new Minim(this);
   
+  // gets audio input from the system's micrphone
   in = minim.getLineIn(Minim.STEREO, 512);
   
   background(0);
@@ -36,6 +37,7 @@ void draw()
   ellipse(width/4, height/4, r, r);
 }
 
+// stops player when user closes program
 void stop()
 {
   in.close();
